@@ -27,8 +27,8 @@
 ## 🛠️ Запуск из исходников
 
 ```bash
-git clone https://github.com/твой-ник/instagram-tracker
-cd instagram-tracker
+git clone https://github.com/kikioju/Instagram_tracker.git
+cd Instagram_tracker
 npm install
 node main.js
 ```
