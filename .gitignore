@@ -1,0 +1,9 @@
+node_modules/
+*.exe
+*.zip
+*.log
+error.log
+chrome_path.txt
+archive_report.txt
+archive_report.csv
+*_followers.csv
