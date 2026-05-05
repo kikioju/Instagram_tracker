@@ -281,11 +281,10 @@ function printMenu() {
 
                     console.log('\n======================================'.magenta);
                     console.log(`✅ Готово! Файл сохранен как: ${fileName}`.green.bold);
-                    console.log(`   🔴 Крыс:     ${notFollowingBack.length}`.red);
-                    console.log(`   🔵 Фанатов:  ${fans.length}`.blue);
+                    console.log(`   🔴 Крыс: ${notFollowingBack.length}`.red);
+                    console.log(`   🔵 Фанатов: ${fans.length}`.blue);
                     console.log(`   🟢 Взаимных: ${mutual.length}`.green);
                     console.log('======================================'.magenta);
-
                 } catch (err) {
                     logError(err);
                 } finally {
