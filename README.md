@@ -1,30 +1,30 @@
 # 🕵️ Instagram Tracker
 
-Утилита для анализа подписок в Instagram. Показывает кто не подписан на тебя в ответ, кто твои фанаты и кто взаимные.
+A utility for analyzing Instagram follow data. Shows who doesn’t follow you back, who your fans are, and who is mutual.
 
-## 🚀 Режимы работы
+## 🚀 Modes
 
-### Режим 1 — ТУРБО (через браузер)
-Открывает Chrome, ты вручную входишь в Instagram, программа сама собирает данные в реальном времени.
+### Mode 1 — TURBO (via browser)
+Opens Chrome, you manually log into Instagram, and the program collects data in real time.
 
-**Плюсы:** точные данные, удалённые аккаунты не попадают в крысы  
-**Минусы:** нужен Chrome, ручной вход, работает дольше
+**Pros:** accurate data, deleted accounts won’t appear as “rats”  
+**Cons:** requires Chrome, manual login, slower  
 
-### Режим 2 — АРХИВ (через .zip от Instagram)
-Читает архив с твоими данными который ты заказываешь в настройках Instagram.
+### Mode 2 — ARCHIVE (via Instagram .zip)
+Reads your data archive that you request from Instagram settings.
 
-**Плюсы:** быстро, не нужен браузер, полностью оффлайн  
-**Минусы:** архив нужно заказывать заранее (ждать 1-2 дня), удалённые аккаунты могут попасть в крысы
+**Pros:** fast, no browser required, fully offline  
+**Cons:** archive must be requested in advance (wait 1–2 days), deleted accounts may appear as “rats”  
 
-## 📦 Как получить архив Instagram
+## 📦 How to get your Instagram archive
 
-1. Инстаграм → Настройки → Поиск
-2. Ввести "Скачивание вашей информации" или "Экспорт вашей информации" → "Выбрать информацию" и убрать галочки на всех кроме "Подписки и подписчики" 
-3. Диапазон дат "Последний год" → Выбери формат **JSON** → Запроси файл
-4. Через от 10 мин до 1-2 дней Instagram пришлёт ссылку на почту
-5. Скачай `.zip` и положи рядом с программой
+1. Instagram → Settings → Search  
+2. Type "Download your information" or "Export your information" → "Select information" and uncheck everything except "Followers and Following"  
+3. Set date range to "Last year" → choose **JSON** format → request the file  
+4. Within 10 minutes to 1–2 days, Instagram will send a link to your email  
+5. Download the `.zip` and place it next to the program  
 
-## 🛠️ Запуск из исходников
+## 🛠️ Run from source
 
 ```bash
 git clone https://github.com/kikioju/Instagram_tracker.git
@@ -33,28 +33,32 @@ npm install
 node main.js
 ```
 
-## 🔨 Сборка .exe
+## 🔨 Build .exe
 
 ```bash
 npm install
 npm run build
 ```
 
-Готовый `instagram_tracker.exe` не требует Node.js.
+The ready instagram_tracker.exe does not require Node.js.
 
-## 📁 Результаты
+## 📁 Results
 
-После анализа рядом с программой появятся файлы:
-- `archive_report.csv` — таблица (открывается в Excel)
-- `archive_report.txt` — текстовый отчёт
+After analysis, the following files will appear next to the program:
 
-### Категории
-| Категория | Описание |
-|-----------|----------|
-| 🔴 Крыса | Ты на них подписан, они на тебя — нет |
-| 🔵 Фанат | Они на тебя подписаны, ты на них — нет |
-| 🟢 Взаимно | Подписаны друг на друга |
+- archive_report.csv — table (opens in Excel)
+- archive_report.txt — text report
 
-## ⚠️ Дисклеймер
+| Category  | Description                                 |
+|-----------|---------------------------------------------|
+| 🔴 Rat    | You follow them, they don’t follow you back |
+| 🔵 Fan    | They follow you, you don’t follow them      |
+| 🟢 Mutual | You follow each other                       |
 
-Программа использует только твои собственные данные и не нарушает правила Instagram. Не злоупотребляй режимом ТУРБО — частые автоматические запросы могут привести к временной блокировке аккаунта.
+## ⚠️ Disclaimer
+
+The program uses only your own data and does not violate Instagram rules.
+
+This tool only works with user-owned data (Instagram export) and does not bypass platform protections or access private information.
+
+Do not overuse TURBO mode — frequent automated requests may lead to a temporary account restriction.
